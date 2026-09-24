@@ -14,6 +14,7 @@ public class Assessment {
     private int totalPoints = 100; // Default total points for assessments
     private int scoredPoints;
     private LocalDate examDate = LocalDate.now(); // Default to current date
+    public string courseName;
 
     /**
      * Create new instance of Assessment with a set name and score.
