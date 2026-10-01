@@ -3,6 +3,8 @@ package edu.oop.data.classparts;
 import edu.oop.data.people.Person;
 
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class is a class - it's the combination of students, instructor, place, and course
@@ -12,7 +14,8 @@ public class RunningClass {
     private final Course course = new Course();
     private Place place;
     private Person faculty;
-    private HashSet<String> allStudents;
+    // students contains their ID then a list of grades
+    private Map<Long, List<Integer>> students;
     private HashSet<String> absentStudents;
 
     /**
