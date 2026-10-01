@@ -16,6 +16,17 @@ public class Person {
     private String email;
     private String phone;
     private String address;
+    private String role;
+
+    /**
+     * Will eventually load a person from database or JSON file
+     * @param id The id of the person
+     * @param role The person's role (Faculty, Staff, or Student)
+     */
+    public Person(long id, String role) {
+        this.id = id;
+        this.role = role;
+    }
 
     /**
      * Create new instance of UserStructures.People with a set first & last name

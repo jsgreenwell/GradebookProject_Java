@@ -1,5 +1,7 @@
-package edu.oop.data.groups;
+package edu.oop.data.classparts;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 /**
@@ -21,4 +23,9 @@ public class Course {
     protected List<String> prerequisites; // List of prerequisite courses
     protected List<String> restrictions; // List of restrictions for the course (e.g., "Senior standing only")
     protected String attributes; // Course attributes (e.g., "Natural Science", "Humanities", "Social Science")
+
+    LocalDate startDate;
+    LocalDate endDate;
+    LocalTime startTime;
+    LocalTime endTime;
 }

@@ -1,4 +1,4 @@
-package edu.oop.data.groups;
+package edu.oop.data.classparts;
 
 import java.util.List;
 
