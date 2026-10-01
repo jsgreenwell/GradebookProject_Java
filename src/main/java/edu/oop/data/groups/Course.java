@@ -11,6 +11,7 @@ public class Course {
     protected String CRN; // Course Reference Number
     protected String subject; // Course subject (e.g., "CS" for Computer Science)
     protected int courseNumber; // Course number (e.g., 101, 202)
+    protected int CourseFee; // Course Fee (e.g., 100, 200, 300, etc.)
 
     protected String name; // Course name
     protected String description; // Course description
