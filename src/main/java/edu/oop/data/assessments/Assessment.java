@@ -44,10 +44,10 @@ public class Assessment {
      * @param score The point based score to be added
      */
     public void enterScore(int score) {
-        if (score >= 0) {
-            scoredPoints = score;
-        }
+    if (score >= 0 && score <= totalPoints) {
+        scoredPoints = score;
     }
+}
 
     /**
      * Get the Score of the Assessment as a percentage of total points
