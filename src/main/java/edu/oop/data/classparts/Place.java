@@ -9,6 +9,14 @@ public class Place {
     protected String building;
     protected String room;
 
+    public String getBuilding() {
+        return building;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
     public Place(String building, String room) {
         this.building = building;
         this.room = room;

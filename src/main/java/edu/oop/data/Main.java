@@ -1,6 +1,8 @@
 package edu.oop.data;
 
 
+import edu.oop.data.people.Person;
+
 public class Main {
     enum STATE {
         START, SCHEDULE, ASSESS, GRADES, EXIT
@@ -32,12 +34,18 @@ public class Main {
 
     static void main() {
         // We'll integrate this into a GUI later (using Android probably)
+        // For now just make student person (we will add selection later)
+        // Also will load person from DB/JSON
+        Person student = new Person("Robert", "Wild", "Bob");
+
 
         STATE state = STATE.START;
         while (state != STATE.EXIT) {
             switch (displayStudentMenu()) {
                 case 1:
                     state = STATE.SCHEDULE;
+                    student.createSchedule();
+                    student.printSchedule();
                     IO.println("Set schedule here");
                     break;
                 case 2:

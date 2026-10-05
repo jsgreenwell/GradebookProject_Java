@@ -10,7 +10,6 @@ import java.util.List;
  */
 public class Course {
     // Again no getters & setters - should either access through a Group member or be in this package
-    protected String CRN; // Course Reference Number
     protected String subject; // Course subject (e.g., "CS" for Computer Science)
     protected int courseNumber; // Course number (e.g., 101, 202)
     protected int CourseFee; // Course Fee (e.g., 100, 200, 300, etc.)

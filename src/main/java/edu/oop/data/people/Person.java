@@ -18,6 +18,8 @@ public class Person {
     private String address;
     private String role;
 
+    private Schedule schedule;
+
     /**
      * Will eventually load a person from database or JSON file
      * @param id The id of the person
@@ -92,6 +94,15 @@ public class Person {
 
     // These are just default getters and setters.
     // TODO: Add validation to setters for email, phone, and address & overloads.
+    // Also fix schedule so we can alter it
+    public void createSchedule() {
+        schedule = new Schedule();
+    }
+
+    public void printSchedule() {
+        IO.println(schedule);
+    }
+
     public LocalDate getBirthDate() {
         return birthDate;
     }
