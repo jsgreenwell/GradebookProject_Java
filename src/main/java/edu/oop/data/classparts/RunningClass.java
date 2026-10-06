@@ -11,9 +11,10 @@ import java.util.Map;
  */
 public class RunningClass {
     // Holds information about course and location of class
+    public long CRN; // Course Reference Number
     private final Course course = new Course();
-    private Place place;
-    private Person faculty;
+    public Place place;
+    public Person faculty;
     // students contains their ID then a list of grades
     private Map<Long, List<Integer>> students;
     private HashSet<String> absentStudents;
@@ -24,10 +25,10 @@ public class RunningClass {
      * @param building Build class is at
      * @param room Room number (string as we have letters in room numbers)
      */
-    public RunningClass(String CRN, String building, String room) {
+    public RunningClass(long CRN, String building, String room) {
         // We would actually load the course information from a DB or JSON file here
         // For now just set it
-        this.course.CRN = CRN;
+        this.CRN = CRN;
         this.place = new Place(building, room);
     }
 
@@ -39,7 +40,7 @@ public class RunningClass {
      * @param id Person's ID
      * @param role Person's role (faculty, student, staff)
      */
-    public RunningClass(String CRN, String building, String room,
+    public RunningClass(long CRN, String building, String room,
                         long id, String role) {
         this(CRN, building, room);
         this.faculty = new Person(id, role);
